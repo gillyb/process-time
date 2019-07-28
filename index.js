@@ -5,7 +5,7 @@ const processUpTime = () => {
     return seconds.toFixed(2) + 's';
 
   if (seconds < (60 * 60))
-    return parseInt(seconds / 60) + ':' + (seconds % 60) + 'm';
+    return parseInt(seconds / 60) + ':' + parseInt(seconds % 60) + 'm';
 
   return parseInt((seconds / 60) / 60) + ':' + parseInt((seconds % (60 * 60)) / 60) + 'h';
 };
